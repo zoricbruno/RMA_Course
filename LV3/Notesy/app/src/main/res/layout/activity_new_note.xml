@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_medium"
+    tools:context=".activities.NewNoteActivity">
+
+    <TextView
+        android:id="@+id/tv_newNote_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/newNote_headerText"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_newNote_title_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/tv_newNote_header">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_newNote_title_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/newNote_titleInputHint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_newNote_priority_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/til_newNote_title_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_newNote_priority_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/newNote_priorityInputHint"
+            android:inputType="numberSigned"
+            android:maxLength="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_newNote_details_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/til_newNote_priority_input"
+        app:layout_constraintBottom_toTopOf="@id/b_newNote_save">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_newNote_details_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:hint="@string/newNote_detailsInputHint"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/b_newNote_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_newNote_details_input"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/margin_small"
+        android:text="@string/newNote_saveText"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

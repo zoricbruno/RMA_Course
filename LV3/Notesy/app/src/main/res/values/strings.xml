@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Notesy</string>
+    <string name="text_noteImportance_contentDescription">Importance of the note</string>
+    <string name="newNote_headerText">Create new note</string>
+    <string name="newNote_titleInputHint">Enter title for new note</string>
+    <string name="newNote_saveText">Save</string>
+    <string name="newNote_priorityInputHint">Enter priority for new note</string>
+    <string name="newNote_detailsInputHint">Enter details for new note</string>
+</resources>

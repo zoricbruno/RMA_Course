@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Animal counter</string>
+    <string name="label_seeDog">See dog!</string>
+    <string name="label_seeCat">See cat!</string>
+</resources>

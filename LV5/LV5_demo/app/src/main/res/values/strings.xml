@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dicey</string>
+    <string name="sensorValueZero">0.000</string>
+    <string name="labelRoll">Roll!!!</string>
+</resources>

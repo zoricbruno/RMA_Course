@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.DiceActivity">
+
+    <ImageButton
+        android:id="@+id/ib_die_topLeft"
+        android:layout_width="@dimen/dieSideLength"
+        android:layout_height="@dimen/dieSideLength"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zero"
+        app:layout_constraintEnd_toStartOf="@+id/ib_die_topCenter"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_die_topCenter"
+        android:layout_width="@dimen/dieSideLength"
+        android:layout_height="@dimen/dieSideLength"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zero"
+        app:layout_constraintEnd_toStartOf="@+id/ib_die_topRight"
+        app:layout_constraintStart_toEndOf="@id/ib_die_topLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_die_topRight"
+        android:layout_width="@dimen/dieSideLength"
+        android:layout_height="@dimen/dieSideLength"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ib_die_topCenter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_die_botLeft"
+        android:layout_width="@dimen/dieSideLength"
+        android:layout_height="@dimen/dieSideLength"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zero"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/ib_die_topLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ib_die_botCenter"/>
+
+    <ImageButton
+        android:id="@+id/ib_die_botCenter"
+        android:layout_width="@dimen/dieSideLength"
+        android:layout_height="@dimen/dieSideLength"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zero"
+        app:layout_constraintStart_toEndOf="@id/ib_die_botLeft"
+        app:layout_constraintEnd_toStartOf="@+id/ib_die_botRight"
+        app:layout_constraintTop_toBottomOf="@id/ib_die_topCenter" />
+
+    <ImageButton
+        android:id="@+id/ib_die_botRight"
+        android:layout_width="@dimen/dieSideLength"
+        android:layout_height="@dimen/dieSideLength"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ib_die_botCenter"
+        app:layout_constraintTop_toBottomOf="@id/ib_die_topRight" />
+
+    <Button
+        android:id="@+id/ib_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ib_die_botCenter"
+        app:layout_constraintBottom_toTopOf="@id/tv_accelerationMagnitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/labelRoll"
+        android:textSize="@dimen/textSize_large"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_accelerationMagnitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="@string/sensorValueZero"
+        android:textColor="#F244F6"
+        android:textSize="@dimen/textSize_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

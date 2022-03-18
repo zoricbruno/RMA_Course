@@ -38,15 +38,12 @@ Fragmenti su klase namijenjene izgradnji fleksibilnih i ponovno iskoristivih dij
 * **[Obavezno]** Proći kroz potpoglavlje *Fragmenti* u priručniku za LV i isprobati primjere
 * **[Obavezno]** [Dokumentacija - Fragmenti](https://developer.android.com/guide/components/fragments)
 * **[Obavezno]** [Codelab - kreiranje fragmenta](https://google.dev/codelabs/kotlin-android-training-create-and-add-fragment#0)
+* **[Obavezno]** [Korištenje navigation components](https://developer.android.com/guide/navigation/navigation-pass-data)
+* **[Obavezno]** [Rad s navigation componentom](https://medium.com/nybles/android-navigation-component-3200e741f816)
 * **[Dodatno]** [Codepath fragments basics](https://github.com/codepath/android_guides/wiki/Creating-and-Using-Fragments)
 * **[Dodatno]** [Codepath Viewpager](https://guides.codepath.com/android/google-play-style-tabs-using-tablayout)
 
-
-
 ## Zadaci
 
-1. **Zadatak 1.** Kreirajte aplikaciju koja omogućuje prikaz informacija o inspirirajućim osobama iz svijeta računarstva. Svaka osoba predstavljena je objektom klase *InspiringPerson*. Aplikacija mora imati dva ekrana, jedan koji omogućuje unos nove osobe i drugi koji omogućuje prikaz svih osoba unutar skrolajuće liste. Koristiti *RecyclerView* kontrolu za prikaz liste osoba. Osobe držati u memoriji. Prikaz unutar liste treba prikazati sliku osobe, datum rođenja i eventualno smrti, te kratak opis (1-2 rečenice). Klik na sliku osobe treba prikazati nasumičan citat te osobe. 
-	* Pomoć: Osobe možete čuvati u *object* singletonu naziva PeopleRepository koji unutar sebe ima instancu *MutableList* klase. Na repozitoriju omogućiti dodavanje nove osobe.
-2. **Zadatak 2.** Riješite zadatak 1. korištenjem fragmenata. Omogućite brisanje osoba iz liste te uređivanje informacija o osobama u listi.
-	* Pomoć: Možete koristiti *Viewpager* s dva taba, jedan za prikaz postojećih, drugi za kreiranje novih. Ili možete raditi s FragmentManagerom pa učitavati odgovarajuće fragmente u kontejnerski layout manager unutar Vašeg *Activity*a. U potonjem slučaju koristite *Action* gumb za dodavanje nove osobe.
-	* Pomoć: Za uređivanje možete koristiti već postojeći view, samo morate poslati id objekta prilikom otvaranja tog viewa kako bi se učitala postojeća osoba iz repozitorija.
+1. **Zadatak 1.** Kreirajte aplikaciju koja omogućuje prikaz informacija o inspirirajućim osobama iz svijeta računarstva. Svaka osoba predstavljena je objektom klase *InspiringPerson*. Aplikacija mora imati tri ekrana za koje se koriste fragmenti. Prvi omogućuje prikaz liste osoba. Drugi omogućuje prikaz detalja o osobi. Treći omogućuje unos nove osobe. Koristiti *RecyclerView* kontrolu za prikaz liste osoba. Koristiti View Binding. Koristiti navigation component. Osobe držati u bazi u memoriji. Prikaz unutar liste treba prikazati ime osobe i datum rođenja. Klikom na detalje prikazuju te informacije te nasumičan citat te osobe.
+

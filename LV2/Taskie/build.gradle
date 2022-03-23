@@ -3,9 +3,17 @@ buildscript {
     repositories {
         google()
     }
+
+    ext{
+        navigation_version = "2.4.1"
+
+        navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+        navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:$navigation_version"
+        navigation_safe_args_gradle_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+    }
+
     dependencies {
-        def nav_version = "2.4.1"
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath navigation_safe_args_gradle_plugin
     }
 }
 

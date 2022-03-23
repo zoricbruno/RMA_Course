@@ -63,12 +63,22 @@
 
     </RadioGroup>
 
+    <DatePicker
+        android:id="@+id/dp_date_added_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintTop_toBottomOf="@id/rg_priority_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <Button
         android:id="@+id/b_save_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/label_save_task"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rg_priority_input" />
+        app:layout_constraintTop_toBottomOf="@id/dp_date_added_input" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

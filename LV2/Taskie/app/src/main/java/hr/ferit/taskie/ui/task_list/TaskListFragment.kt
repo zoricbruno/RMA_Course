@@ -1,20 +1,17 @@
 package hr.ferit.taskie.ui.task_list
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import hr.ferit.taskie.R
 import hr.ferit.taskie.databinding.FragmentTaskListBinding
 import hr.ferit.taskie.di.TaskRepositoryFactory
-import hr.ferit.taskie.ui.task_details.TaskDetailsFragmentArgs
-import hr.ferit.taskie.ui.task_details.TaskDetailsFragmentDirections
+import hr.ferit.taskie.model.Task
 
-class TaskListFragment : Fragment(), OnTaskSelectedListener {
+class TaskListFragment : Fragment(), OnTaskEventListener {
 
     private lateinit var binding: FragmentTaskListBinding
     private lateinit var adapter: TaskAdapter
@@ -63,6 +60,14 @@ class TaskListFragment : Fragment(), OnTaskSelectedListener {
         val action =
             TaskListFragmentDirections.actionTaskListFragmentToTaskDetailsFragment(id ?: -1)
         findNavController().navigate(action)
+    }
+
+    override fun onTaskLongPress(task: Task?): Boolean {
+        task?.let { it ->
+            taskRepository.delete(it)
+            adapter.setTasks(taskRepository.getAllTasks())
+        }
+        return true
     }
 
     private fun showCreateNewTaskFragment() {

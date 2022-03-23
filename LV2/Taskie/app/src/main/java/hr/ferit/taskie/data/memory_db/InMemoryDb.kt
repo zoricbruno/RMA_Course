@@ -1,8 +1,9 @@
 package hr.ferit.taskie.data.memory_db
 
 import hr.ferit.taskie.data.TaskDao
-import hr.ferit.taskie.data.model.Task
-import hr.ferit.taskie.data.model.TaskPriority
+import hr.ferit.taskie.model.Task
+import hr.ferit.taskie.model.TaskPriority
+import java.util.*
 import kotlin.random.Random
 
 class InMemoryDb : TaskDao {
@@ -18,7 +19,9 @@ class InMemoryDb : TaskDao {
                     i.toLong(),
                     "Task_$i",
                     "Please, do task.",
-                    priorities[Random.nextInt(3)])
+                    priorities[Random.nextInt(3)],
+                    Date()
+                )
             )
         }
     }

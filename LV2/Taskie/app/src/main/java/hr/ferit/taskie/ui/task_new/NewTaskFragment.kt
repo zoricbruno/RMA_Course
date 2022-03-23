@@ -5,14 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.allViews
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import hr.ferit.taskie.R
-import hr.ferit.taskie.data.model.Task
-import hr.ferit.taskie.data.model.TaskPriority
+import hr.ferit.taskie.model.Task
+import hr.ferit.taskie.model.TaskPriority
 import hr.ferit.taskie.databinding.FragmentNewTaskBinding
 import hr.ferit.taskie.di.TaskRepositoryFactory
+import hr.ferit.taskie.utils.getDate
+import java.util.*
 
 class NewTaskFragment : Fragment() {
 
@@ -33,15 +34,15 @@ class NewTaskFragment : Fragment() {
 
         val title = binding.etTaskTitleInput.text.toString()
         val contents = binding.etTaskContentsInput.text.toString()
-
         val priority = when(binding.rgPriorityInput.checkedRadioButtonId){
             R.id.rb_priority_high -> TaskPriority.High
             R.id.rb_priority_medium -> TaskPriority.Medium
             R.id.rb_priority_low -> TaskPriority.Low
             else -> TaskPriority.Low
         }
+        val dateAdded = binding.dpDateAddedInput.getDate()
 
-        taskRepository.save(Task(0, title, contents, priority))
+        taskRepository.save(Task(0, title, contents, priority, dateAdded))
 
         Toast.makeText(context, getString(R.string.message_saving), Toast.LENGTH_SHORT).show()
         val action = NewTaskFragmentDirections.actionNewTaskFragmentToTaskListFragment()

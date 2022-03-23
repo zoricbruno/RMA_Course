@@ -1,16 +1,22 @@
-package hr.ferit.taskie.data.model
+package hr.ferit.taskie.model
 
-sealed class TaskPriority{
-    object High : TaskPriority()
-    object Medium : TaskPriority()
-    object Low : TaskPriority()
-}
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.util.*
 
+@Entity(tableName = "tasks")
 data class Task(
-    var id: Long? = null,
+    @PrimaryKey(autoGenerate = true)
+    var id: Long = 0,
+    @ColumnInfo(name = "title") // Optional!
     val title: String,
+    @ColumnInfo(name = "content")
     val content: String,
-    val priority: TaskPriority
+    @ColumnInfo(name = "priority")
+    val priority: TaskPriority,
+    @ColumnInfo(name = "dateAdded")
+    val dateAdded: Date
 ) {
 
 }

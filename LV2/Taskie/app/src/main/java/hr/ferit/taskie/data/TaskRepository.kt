@@ -1,6 +1,6 @@
 package hr.ferit.taskie.data
 
-import hr.ferit.taskie.data.model.Task
+import hr.ferit.taskie.model.Task
 
 
 interface TaskRepository {

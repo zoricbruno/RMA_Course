@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Development/Android/Projects/LV2/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Development/Android/Projects/LV2/app/src/main/res/layout/fragment_new_task.xml" value="0.15" />
+        <entry key="..\:/Development/Android/Projects/LV2/app/src/main/res/layout/fragment_task_details.xml" value="0.25" />
+        <entry key="..\:/Development/Android/Projects/LV2/app/src/main/res/layout/fragment_task_list.xml" value="0.3423913043478261" />
+        <entry key="..\:/Development/Android/Projects/LV2/app/src/main/res/layout/item_task.xml" value="0.22" />
+        <entry key="..\:/Development/Android/RMA_Course/LV2/Taskie/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Development/Android/RMA_Course/LV2/Taskie/app/src/main/res/layout/fragment_new_task.xml" value="0.18802083333333333" />
+        <entry key="..\:/Development/Android/RMA_Course/LV2/Taskie/app/src/main/res/layout/fragment_task_details.xml" value="0.18802083333333333" />
+        <entry key="..\:/Development/Android/RMA_Course/LV2/Taskie/app/src/main/res/layout/fragment_task_list.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

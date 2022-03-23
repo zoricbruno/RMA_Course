@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.ferit.taskie.getColorResource
-import hr.ferit.taskie.data.model.Task
+import hr.ferit.taskie.model.Task
 import hr.ferit.taskie.di.TaskRepositoryFactory
 import hr.ferit.taskie.databinding.FragmentTaskDetailsBinding
+import java.text.SimpleDateFormat
 
 class TaskDetailsFragment : Fragment() {
 
+    private val dateDisplayFormat = SimpleDateFormat("yyyy-MM-dd")
     private lateinit var binding: FragmentTaskDetailsBinding
     private val taskRepository = TaskRepositoryFactory.taskRepository
     private val args: TaskDetailsFragmentArgs by navArgs()
@@ -35,6 +37,7 @@ class TaskDetailsFragment : Fragment() {
     private fun display(task: Task?) {
         task?.let {
             binding.apply {
+                tvTaskDateAdded.text = dateDisplayFormat.format(it.dateAdded)
                 clTaskDetailsRoot.setBackgroundResource(resources.getColorResource(task.priority))
                 tvTaskDetailsTitle.text = task.title
                 tvTaskDetailsContents.text = task.content

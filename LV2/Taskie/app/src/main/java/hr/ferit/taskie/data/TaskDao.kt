@@ -1,13 +1,21 @@
 package hr.ferit.taskie.data
 
-import hr.ferit.taskie.data.model.Task
+import androidx.room.*
+import hr.ferit.taskie.model.Task
 
-
+@Dao
 interface TaskDao {
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun save(task: Task)
+
+    @Delete
     fun delete(task: Task)
+
+    @Query("SELECT * FROM tasks WHERE id =:id")
     fun getTaskById(id: Long): Task?
+
+    @Query("SELECT * FROM tasks")
     fun getAllTasks(): List<Task>
 }
 

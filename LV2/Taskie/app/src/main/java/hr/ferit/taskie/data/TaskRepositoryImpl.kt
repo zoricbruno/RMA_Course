@@ -1,10 +1,6 @@
 package hr.ferit.taskie.data
 
-import hr.ferit.taskie.data.TaskDao
-import hr.ferit.taskie.data.TaskRepository
-import hr.ferit.taskie.data.model.Task
-import hr.ferit.taskie.data.model.TaskPriority
-import kotlin.random.Random
+import hr.ferit.taskie.model.Task
 
 class TaskRepositoryImpl(val taskDao: TaskDao) : TaskRepository {
     override fun save(task: Task) = taskDao.save(task)

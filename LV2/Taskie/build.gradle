@@ -5,11 +5,21 @@ buildscript {
     }
 
     ext{
+        // Navigation:
         navigation_version = "2.4.1"
-
         navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
         navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:$navigation_version"
         navigation_safe_args_gradle_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+
+        // Room database:
+        room_version = "2.4.2"
+        room = "androidx.room:room-runtime:$room_version"
+        room_compiler = "androidx.room:room-compiler:$room_version"
+        room_ktx = "androidx.room:room-ktx:$room_version" // Kotlin Extensions and Coroutines support for Room
+
+        // Scopes:
+        lifecycle_scope_version = "2.4.1"
+        lifecylce_scope = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_scope_version" // LifecycleScope
     }
 
     dependencies {

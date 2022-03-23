@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ferit.taskie.getColorResource
 import hr.ferit.taskie.R
-import hr.ferit.taskie.data.model.Task
+import hr.ferit.taskie.model.Task
 import hr.ferit.taskie.databinding.ItemTaskBinding
 
 class TaskAdapter : RecyclerView.Adapter<TaskViewHolder>() {
 
-    val tasks = mutableListOf<Task>()
-    var onTaskSelectedListener: OnTaskSelectedListener? = null
+    private val tasks = mutableListOf<Task>()
+    var onTaskSelectedListener: OnTaskEventListener? = null
 
     fun setTasks(tasks: List<Task>) {
         this.tasks.clear()
@@ -31,6 +31,7 @@ class TaskAdapter : RecyclerView.Adapter<TaskViewHolder>() {
         holder.bind(task)
         onTaskSelectedListener?.let { listener ->
             holder.itemView.setOnClickListener { listener.onTaskSelected(task.id) }
+            holder.itemView.setOnLongClickListener { listener.onTaskLongPress(task) }
         }
     }
 

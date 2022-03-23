@@ -1,0 +1,1 @@
+W:\Development\Android\RMA_Course\LV2\Taskie\buildSrc\build\classes\kotlin\main\Dependencies.class;W:\Development\Android\RMA_Course\LV2\Taskie\buildSrc\build\classes\kotlin\main\Versions.class

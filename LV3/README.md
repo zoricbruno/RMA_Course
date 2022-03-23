@@ -22,10 +22,10 @@ Osim dijeljenih postavki i uobičajenih datoteka, Android nudi mogućnost pohran
 * **[Obavezno]** Proći kroz codelab [Create a Room database](https://codelabs.developers.google.com/codelabs/kotlin-android-training-room-database/#0)
 * **[Dodatno]** [Tutorial - kako koristiti room](https://guides.codepath.com/android/Room-Guide)
 * **[Dodatno]** Proučiti livedata i viewmodel klase (korisno za LV4) [Room with a view](https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0)
+* **[Dodatno]** Upute za Room (https://johncodeos.com/how-to-use-room-in-android-using-kotlin/)
 
 ### Zadaci
-1. **Zadatak 1.** Kreirajte mini aplikaciju za brojanje ptica. Aplikacija se treba sastojati od jednog *TextView-a*, četiri gumba (svaki od gumba predstavlja boju ptice) te gumba za reset brojača i boje. Klikom na neki od gumba za boju ptice inkrementira ukupan brojač i mijenja pozadinu kontrole koja prikazuje brojač na boju zadnje viđene ptice. Stanje aplikacije mora preživjeti gašenje i ponovno pokretanje aplikacije, vrijednosti pohraniti u dijeljene postavke.
-2. **Zadatak 2.** Zadatak iz LV2 koji je služio za pohranu inspirirajućih osoba proširite tako da umjesto liste u memoriji koristite Room bazu podataka i sve podatke pohranjujete u bazu.
+1. **Zadatak 1.** Kreirajte mini aplikaciju za brojanje ptica. Definirajte klasu koja predstavlja model sa stanjem za boju, datumom i vremenom kad je ptica uočena i imenom lokacije na kojoj je uočena. Aplikacija treba imati dva fragmenta (ako želite, možete rješenje ostvariti kao 1 Activity i 1 dijalog). Prvi prikazuje listu ptica i ima gumb za dodavanje ptice, a drugi sadrži kontrole za unos viđene ptice. Prilikom dodavanja ptice, informacije se pohranjuju u bazu podataka i zatim prikazuju u listi. Stanje aplikacije mora preživjeti gašenje i ponovno pokretanje aplikacije, vrijednosti pohraniti u Room bazu podataka.
 
 
 

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Taskie</string>
+    <string name="message_saving">Saving task</string>
+    <string name="label_save_task">Save task</string>
+    <string name="hint_task_content_input">Enter task contents</string>
+    <string name="hint_task_title_input">Enter task title</string>
+    <string name="label_priority_high">High</string>
+    <string name="label_priority_low">Low</string>
+    <string name="label_priority_medium">Medium</string>
+    <string name="label_no_such_task">Sorry, no such task exists.</string>
+</resources>

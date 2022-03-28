@@ -44,5 +44,4 @@ Live data je klasa za držanje podataka koju je moguće promatrati (engl. *obser
 
 
 ## Zadaci
-1. **Zadatak 1.** Riješiti zadatak s promatranjem ptica iz LV3 korištenjem data bindinga, viewmodela i live data. *Pomoć - [primjer](https://proandroiddev.com/architecture-components-modelview-livedata-33d20bdcc4e9)*
-2. **Zadatak 2.** Proći kroz https://blog.mindorks.com/mvvm-architecture-android-tutorial-for-beginners-step-by-step-guide i izraditi aplikaciju iz primjera.
+1. **Zadatak 1.** Izraditi aplikaciju za praćenje rezultata košarkaške utakmice. Koristiti LiveData, ViewModel, ViewBindin i Koin za ubrizgavanje ovisnosti. Ekran Activitya na vrhu treba imati imati prikazan datum. Ispod toga treba biti podijeljen na dva dijela. S lijeve strane smjestiti naziv jedne ekipe, broj bodova, gumbe za dodavanje 3, 2 i 1 boda. Isto to ostvariti za drugu ekipu. Na dnu ekrana staviti gumb za reset. U ViewModel klasi treba instancirati 2 LiveData objekta koji predstavljaju rezultat i pretplatiti se na njihovu promjenu na UI-ju. Korištenjem Koin biblioteke ubrizgati ovisnost o ViewModelu u Activity.

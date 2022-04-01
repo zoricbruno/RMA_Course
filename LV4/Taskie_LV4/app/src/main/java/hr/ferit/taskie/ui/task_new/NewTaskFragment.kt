@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import hr.ferit.taskie.R
 import hr.ferit.taskie.model.TaskPriority
 import hr.ferit.taskie.databinding.FragmentNewTaskBinding
+import hr.ferit.taskie.presentation.TaskNewViewModel
 import hr.ferit.taskie.utils.getDate
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

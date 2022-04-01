@@ -19,7 +19,6 @@ Android pruža podršku za pisanje deklarativnih sučelja korištenjem principa 
 * **[Dodatno]** [Vogella - data binding](https://www.vogella.com/tutorials/AndroidDatabinding/article.html)
 
 
-
 ## View modeli i live data
 
 Podaci koji se čuvaju unutar komponente koja predstavlja UI (npr. *activity*), a koji predstavljaju neko stanje potrebno sučelju neće preživjeti rotaciju ekrana (promjenu konfiguracije). Sjetite se da u tom slučaju aktivnost biva uništena i ponovno stvorena, prolazeći tako kroz niz faza životnog ciklusa. Još jedan primjer mogućih problema predstavljaju i zahtjevi prema udaljenim resursima. Ako zahtjev traje dulje, upitno je je li UI komponenta i dalje prisutna. ViewModel je klasa dizajnirana da upravlja upravo takvim podacima i situacijama, ali uz svijest o životnom ciklusu UI komponente. Dio je Android arhitekturalnih komponenti i veći dio navedenog omogućuje automatski. Kako biste se upoznali s ViewModelima, proučite
@@ -34,6 +33,14 @@ Live data je klasa za držanje podataka koju je moguće promatrati (engl. *obser
 * **[Obavezno]** [Dokumentacija](https://developer.android.com/topic/libraries/architecture/livedata)
 * **[Obavezno]** [Live data, Lyla Fujiwara](https://www.youtube.com/watch?v=OMcDk2_4LSk)
 * **[Obavezno]** [Jednostavan primjer rada LiveData](https://medium.com/elye.project/understanding-live-data-made-simple-a820fcd7b4d0)
+
+## Koin
+* **[Obavezno]** [Dokumentacija](https://insert-koin.io/docs/setup/v3.1)
+* **[Obavezno]** [Quick start](https://insert-koin.io/docs/quickstart/android)
+* **[Obavezno]** [Viewmodels](https://insert-koin.io/docs/quickstart/android-viewmodel)
+* **[Ugradnja Koina u aplikaciju]** [Viewmodels](https://medium.com/swlh/mvvm-on-android-with-the-architecture-components-koin-f53c3c200363)
+
+
 
 ## Kako pomiriti sve navedeno:
 * **[Dodatno]** [Fun with LiveData](https://www.youtube.com/watch?v=2rO4r-JOQtA&t=496s)

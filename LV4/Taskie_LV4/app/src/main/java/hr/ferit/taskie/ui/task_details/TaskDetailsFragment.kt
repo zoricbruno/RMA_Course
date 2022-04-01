@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.ferit.taskie.getColorResource
 import hr.ferit.taskie.R
-import hr.ferit.taskie.data.TaskRepository
 import hr.ferit.taskie.model.Task
 import hr.ferit.taskie.databinding.FragmentTaskDetailsBinding
+import hr.ferit.taskie.presentation.TaskDetailsViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
 
@@ -18,7 +18,7 @@ class TaskDetailsFragment : Fragment() {
 
     private val dateDisplayFormat = SimpleDateFormat("yyyy-MM-dd")
     private lateinit var binding: FragmentTaskDetailsBinding
-    private val viewModel:TaskDetailsViewModel by viewModel()
+    private val viewModel: TaskDetailsViewModel by viewModel()
     private val args: TaskDetailsFragmentArgs by navArgs()
 
     override fun onCreateView(

@@ -1,7 +1,7 @@
-package hr.ferit.taskie.ui.task_new
+package hr.ferit.taskie.presentation
 
 import androidx.lifecycle.ViewModel
-import hr.ferit.taskie.data.TaskRepository
+import hr.ferit.taskie.data.repository.TaskRepository
 import hr.ferit.taskie.model.Task
 import hr.ferit.taskie.model.TaskPriority
 import java.util.*

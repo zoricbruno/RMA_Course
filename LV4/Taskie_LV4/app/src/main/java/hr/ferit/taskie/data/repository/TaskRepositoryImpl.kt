@@ -1,6 +1,7 @@
-package hr.ferit.taskie.data
+package hr.ferit.taskie.data.repository
 
 import androidx.lifecycle.LiveData
+import hr.ferit.taskie.data.TaskDao
 import hr.ferit.taskie.model.Task
 
 class TaskRepositoryImpl(val taskDao: TaskDao) : TaskRepository {

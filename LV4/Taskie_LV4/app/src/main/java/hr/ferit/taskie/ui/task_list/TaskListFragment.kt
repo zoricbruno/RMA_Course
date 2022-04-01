@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import hr.ferit.taskie.databinding.FragmentTaskListBinding
 import hr.ferit.taskie.model.Task
+import hr.ferit.taskie.presentation.TaskListViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TaskListFragment : Fragment(), OnTaskEventListener {

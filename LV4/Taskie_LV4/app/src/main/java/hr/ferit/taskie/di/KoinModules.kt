@@ -2,12 +2,12 @@ package hr.ferit.taskie.di
 
 import android.app.Application
 import hr.ferit.taskie.data.TaskDao
-import hr.ferit.taskie.data.TaskRepository
-import hr.ferit.taskie.data.TaskRepositoryImpl
+import hr.ferit.taskie.data.repository.TaskRepository
+import hr.ferit.taskie.data.repository.TaskRepositoryImpl
 import hr.ferit.taskie.data.room.TaskDatabase
-import hr.ferit.taskie.ui.task_details.TaskDetailsViewModel
-import hr.ferit.taskie.ui.task_list.TaskListViewModel
-import hr.ferit.taskie.ui.task_new.TaskNewViewModel
+import hr.ferit.taskie.presentation.TaskDetailsViewModel
+import hr.ferit.taskie.presentation.TaskListViewModel
+import hr.ferit.taskie.presentation.TaskNewViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

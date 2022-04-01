@@ -1,4 +1,4 @@
-package hr.ferit.taskie.data
+package hr.ferit.taskie.data.repository
 
 import androidx.lifecycle.LiveData
 import hr.ferit.taskie.model.Task
